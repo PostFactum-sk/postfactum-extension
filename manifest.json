@@ -1,0 +1,16 @@
+{
+  "name": "Post Factum",
+  "short_name": "PostFactum",
+  "version": "1.0",
+  "description": "A framework for classifying trust for online sources",
+  "manifest_version": 2,
+
+  "browser_action": {
+   "default_icon": "icons/favicon-32x32.png",
+   "default_popup": "assets/dialog/dialog.html"
+  },
+
+  "permissions": [
+   "activeTab"
+   ]
+}
