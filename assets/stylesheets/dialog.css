@@ -70,7 +70,7 @@ body {
   width: 100%;
   background-color: #111922;
   padding: 0;
-  background-image: url(../img/bg.png);
+  background-image: url(../images/bg.png);
   background-repeat: repeat;
   background-position: center center;
 }
@@ -93,7 +93,7 @@ body {
   height: 50%;
   width: 100%;
   background-color: #f3f3f3;
-  background-image: url(../img/arrow.png);
+  background-image: url(../images/arrow.png);
   background-repeat: no-repeat;
   background-position: center top;
 }
