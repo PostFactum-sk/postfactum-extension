@@ -30,14 +30,14 @@ function sendRequest(action) {
   })
 }
 
-document.getElementById('submitPage').addEventListener('click', function () {
+document.getElementById('submit-page').addEventListener('click', function () {
   sendRequest("submit_url")
 });
 
-document.getElementById('upVote').addEventListener('click', function () {
+document.getElementById('up-vote').addEventListener('click', function () {
   sendRequest("upvote_url")
 });
 
-document.getElementById('downVote').addEventListener('click', function () {
+document.getElementById('down-vote').addEventListener('click', function () {
   sendRequest("downvote_url")
 });
