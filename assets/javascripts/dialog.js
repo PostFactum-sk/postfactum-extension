@@ -6,27 +6,30 @@ const delay = (function () {
   };
 })();
 
-function sendRequest(action) {
-  chrome.tabs.getSelected(null, function (tab) {
-    const data = new FormData();
-    data.append('url', tab.url);
-    data.append('action', action);
-    data.append('title', tab.title);
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://stg.postfactum.sk/api/v1/source_articles/submit/', true);
-    // Keep both URLs for fast switching between local and remote servers
-    // xhr.open('POST', 'http://127.0.0.1:8000/api/v1/source_articles/submit/', true);
-    xhr.onload = function () {
-      const responseDiv = document.getElementById("r-response");
-      responseDiv.classList.add("r-response");
-      responseDiv.innerHTML = "Požiadavka bola odoslaná.<br>Ďakujeme";
-      console.log(this.responseText);
-      delay(function () {
-        responseDiv.innerHTML = "";
-        responseDiv.classList.remove("r-response");
-      }, 2000);
+function sendRequest(vote) {
+  chrome.tabs.getSelected(null, async function (tab) {
+    const data = {
+      vote,
+      url: tab.url,
+      title: tab.title,
     };
-    xhr.send(data);
+    const url = 'https://stg.postfactum.sk/api/v1/source_articles/submit/';
+    // Keep both URLs for fast switching between local and remote servers
+    // const url = 'http://127.0.0.1:8000/api/v1/source_articles/submit/';
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    const responseDiv = document.getElementById("r-response");
+    responseDiv.classList.add("r-response");
+    responseDiv.innerHTML = "Požiadavka bola odoslaná.<br>Ďakujeme";
+    delay(function () {
+      responseDiv.innerHTML = "";
+      responseDiv.classList.remove("r-response");
+    }, 2000);
   })
 }
 
