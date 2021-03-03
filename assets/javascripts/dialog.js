@@ -12,7 +12,7 @@ const delay = (function () {
 async function sendRequest(vote) {
   return new Promise((resolve, reject) => {
     try {
-      chrome.tabs.getSelected(null, async (tab) => {
+      chrome.tabs.query({ active: true }, async ([tab]) => {
         const data = {
           vote,
           url: tab.url,
