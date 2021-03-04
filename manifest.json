@@ -12,6 +12,9 @@
     "default_icon": "icons/favicon-32x32.png",
     "default_popup": "dialog.html"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": [
     "tabs",
     "contextMenus"
