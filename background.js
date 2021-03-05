@@ -19,11 +19,11 @@ const sendRequest = async (vote) => {
 }
 const upvoteMenuItem = {
   id: 'upvote-link',
-  title: 'upvote link',
+  title: 'Dôveryhodná stránka',
 };
 const downvoteMenuItem = {
   id: 'downvote-link',
-  title: 'downvote link',
+  title: 'Nedôveryhodná stránka',
 };
 
 chrome.contextMenus.create(upvoteMenuItem);
