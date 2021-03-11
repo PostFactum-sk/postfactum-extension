@@ -1,3 +1,5 @@
+importScripts('./config.js');
+
 const sendRequest = async (vote) => {
   const [tab] = await chrome.tabs.query({ active: true });
   const data = {
@@ -5,9 +7,7 @@ const sendRequest = async (vote) => {
     url: tab.url,
     title: tab.title,
   };
-  const url = 'https://stg.postfactum.sk/api/v1/source_articles/submit/';
-  // Keep both URLs for fast switching between local and remote servers
-  // const url = 'http://localhost:8000/api/v1/source_articles/submit/';
+  const url = `${config.baseURL}/api/v1/source_articles/submit/`;
   const response = await fetch(url, {
     method: 'POST',
     headers: {
