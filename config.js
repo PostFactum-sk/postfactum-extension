@@ -5,8 +5,8 @@ var config = {};
 
   // installType is one of ['admin', 'development', 'normal', 'sideload', 'other']
   if (setup.installType === 'development') {
-    config.baseURL = 'http://localhost:8000';
+    config.baseUrl = 'http://localhost:8000';
   } else {
-    config.baseURL = 'https://stg.postfactum.sk';
+    config.baseUrl = 'https://stg.postfactum.sk';
   }
 })();
