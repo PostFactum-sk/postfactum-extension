@@ -16,9 +16,7 @@ async function sendRequest(vote) {
     url: tab.url,
     title: tab.title,
   };
-  const url = 'https://stg.postfactum.sk/api/v1/source_articles/submit/';
-  // Keep both URLs for fast switching between local and remote servers
-  // const url = 'http://127.0.0.1:8000/api/v1/source_articles/submit/';
+  const url = `${config.baseURL}/api/v1/source_articles/submit/`;
   const response = await fetch(url, {
     method: 'POST',
     headers: {
