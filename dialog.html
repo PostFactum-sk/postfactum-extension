@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <title>PostFactum</title>
   <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
   <link href="./assets/stylesheets/dialog.css" rel="stylesheet" type="text/css">
+  <script src="./config.js"></script>
+  <script src="./postfactum.js"></script>
 </head>
 
 <body>
@@ -17,15 +19,20 @@
   <div class="dialog-middle">
     <h2>Je táto stránka dôveryhodná?</h2>
     <form id="submit-form">
-      <button type="submit" class="dialog-btn btn-upvote" name="upvote">Áno <i class="fa fa-thumbs-o-up"></i></button>
-      <button type="submit" class="dialog-btn btn-downvote" name="downvote">Nie <i class="fa fa-thumbs-o-down"></i></button>
+      <button type="submit" class="dialog-btn btn-upvote" name="upvote">
+        Áno <i class="fa fa-thumbs-o-up"></i>
+      </button>
+      <button type="submit" class="dialog-btn btn-downvote" name="downvote">
+        Nie <i class="fa fa-thumbs-o-down"></i>
+      </button>
     </form>
   </div>
   <div class="dialog-bottom">
-    <a class="dialog-link" href="https://postfactum.sk" id="about" tabIndex="-1" target="_blank">Viac o Post
-      Factum</a>
+    <a class="dialog-link" href="https://postfactum.sk" id="about" tabIndex="-1" target="_blank">
+      Viac o Post Factum
+    </a>
 
-  <div id="r-response"></div>
+    <div id="r-response"></div>
   </div>
   <script src="./assets/javascripts/dialog.js"></script>
 </body>
