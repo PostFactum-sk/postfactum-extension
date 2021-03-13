@@ -4,7 +4,7 @@ const PostFactum = {
     return `${config.baseUrl}/api/v1/source_articles/submit/`;
   },
   sendRequest: async function (vote) {
-    const [tab] = await chrome.tabs.query({ active: true });
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const data = {
       vote,
       url: tab.url,
