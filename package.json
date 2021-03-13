@@ -25,5 +25,7 @@
     "url": "https://github.com/PostFactum-sk/postfactum-extension/issues"
   },
   "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  }
 }
