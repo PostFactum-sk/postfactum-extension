@@ -24,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/PostFactum-sk/postfactum-extension/issues"
   },
-  "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme"
+  "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
+  "devDependencies": {}
 }
