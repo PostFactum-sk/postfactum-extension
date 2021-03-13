@@ -1,7 +1,7 @@
 {
   "name": "postfactum-extension",
   "version": "1.0.0",
-  "description": "\"A framework for classifying trust for online sources\"",
+  "description": "A framework for classifying trust for online sources",
   "main": "dialog.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,8 +24,5 @@
   "bugs": {
     "url": "https://github.com/PostFactum-sk/postfactum-extension/issues"
   },
-  "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
-  "devDependencies": {
-    "cypress": "^6.6.0"
-  }
+  "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme"
 }
