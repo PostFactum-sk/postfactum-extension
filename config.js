@@ -1,6 +1,5 @@
-var config = {};
-
-(async () => {
+async function getConfig() {
+  const config = {};
   const setup = await chrome.management.getSelf();
 
   // installType is one of ['admin', 'development', 'normal', 'sideload', 'other']
@@ -9,4 +8,5 @@ var config = {};
   } else {
     config.baseUrl = 'https://stg.postfactum.sk';
   }
-})();
+  return config;
+}
