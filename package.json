@@ -4,7 +4,7 @@
   "description": "A framework for classifying trust for online sources",
   "main": "dialog.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
   "devDependencies": {
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "puppeteer": "^8.0.0"
   }
 }
