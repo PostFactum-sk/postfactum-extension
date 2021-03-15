@@ -77,4 +77,9 @@ describe('User upvotes page', function () {
       assert.strictEqual(responseText, 'POŽIADAVKA BOLA ODOSLANÁ.\nĎAKUJEME');
     });
   });
+
+  context('when contextMenu', () => {
+    xit('clicks upvote button', async () => {
+    });
+  });
 });
