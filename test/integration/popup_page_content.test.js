@@ -7,7 +7,7 @@ describe('Popup page content', function () {
   beforeEach(async () => {
     page = await browser.newPage();
     const extensionId = await getExtensionId(page);
-    await page.goto(`chrome-extension://${extensionId}/dialog.html`);
+    await page.goto(`chrome-extension://${extensionId}/popup.html`);
   });
 
   afterEach(async () => {

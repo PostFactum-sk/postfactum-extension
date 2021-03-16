@@ -11,7 +11,7 @@
   },
   "action": {
     "default_icon": "icons/favicon-32x32.png",
-    "default_popup": "dialog.html"
+    "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
