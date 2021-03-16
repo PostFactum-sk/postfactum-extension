@@ -77,9 +77,4 @@ describe('User downvotes page', function () {
       assert.strictEqual(responseText, 'POŽIADAVKA BOLA ODOSLANÁ.\nĎAKUJEME');
     });
   });
-
-  context('when contextMenu', () => {
-    xit('clicks downvote button', async () => {
-    });
-  });
 });
