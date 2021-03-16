@@ -1,5 +1,5 @@
 const assert = require("assert");
-const { getExtensionId } = require('../integrationTestHelper');
+const { getExtensionId } = require('../test_helper');
 
 describe('Popup page content', function () {
   let page;
