@@ -4,7 +4,8 @@
   "description": "A framework for classifying trust for online sources",
   "main": "src/popup.html",
   "engines": {
-    "node": "14.16.0"
+    "node": "14.16.0",
+    "npm": ">=5.6"
   },
   "scripts": {
     "test": "npx mocha test/**/*.test.js"
