@@ -2,7 +2,10 @@
   "name": "postfactum-extension",
   "version": "1.0.0",
   "description": "A framework for classifying trust for online sources",
-  "main": "dialog.html",
+  "main": "src/popup.html",
+  "engines": {
+    "node": "14.16.0"
+  },
   "scripts": {
     "test": "npx mocha test/**/*.test.js"
   },
