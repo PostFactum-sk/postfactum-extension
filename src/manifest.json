@@ -6,11 +6,11 @@
   "description": "A framework for classifying trust for online sources",
   "minimum_chrome_version": "61",
   "icons": {
-    "16": "icons/favicon-16x16.png",
-    "32": "icons/favicon-32x32.png"
+    "16": "assets/icons/favicon-16x16.png",
+    "32": "assets/icons/favicon-32x32.png"
   },
   "action": {
-    "default_icon": "icons/favicon-32x32.png",
+    "default_icon": "assets/icons/favicon-32x32.png",
     "default_popup": "popup.html"
   },
   "background": {

@@ -1,4 +1,7 @@
-importScripts('./config.js', './postfactum.js');
+importScripts(
+  './assets/javascripts/config.js',
+  './assets/javascripts/postfactum.js'
+);
 
 (async () => {
   await PostFactum.init(getConfig);
