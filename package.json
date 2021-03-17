@@ -1,0 +1,36 @@
+{
+  "name": "postfactum-extension",
+  "version": "1.0.0",
+  "description": "A framework for classifying trust for online sources",
+  "main": "src/popup.html",
+  "engines": {
+    "node": "14.16.0",
+    "npm": ">=5.6"
+  },
+  "scripts": {
+    "test": "npx mocha test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PostFactum-sk/postfactum-extension.git"
+  },
+  "author": {
+    "name": "Tomas Pytel",
+    "url": "https://github.com/Pytlicek"
+  },
+  "contributors": [
+    {
+      "name": "Tomas Tomecek",
+      "url": "https://github.com/tomtomecek"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PostFactum-sk/postfactum-extension/issues"
+  },
+  "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
+  "devDependencies": {
+    "mocha": "^8.3.2",
+    "puppeteer": "^8.0.0"
+  }
+}

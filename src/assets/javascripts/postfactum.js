@@ -1,9 +1,9 @@
-// Expects config object
 const PostFactum = {
   get submitUrl() {
-    return `${config.baseUrl}/api/v1/source_articles/submit/`;
+    return `${this.config.baseUrl}/api/v1/source_articles/submit/`;
   },
-  sendRequest: async function (vote) {
+
+  async sendRequest(vote) {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const data = {
       vote,
@@ -18,5 +18,9 @@ const PostFactum = {
       body: JSON.stringify(data),
     });
     return response;
+  },
+
+  async init(getConfig) {
+    this.config = await getConfig();
   },
 };
