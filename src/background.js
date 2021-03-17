@@ -17,11 +17,11 @@ importScripts(
 
   chrome.contextMenus.create(upvoteMenuItem);
   chrome.contextMenus.create(downvoteMenuItem);
-  chrome.contextMenus.onClicked.addListener((event) => {
+  chrome.contextMenus.onClicked.addListener(async (event) => {
     if (event.menuItemId === 'upvote-link') {
-      PostFactum.sendRequest('upvote');
+      await PostFactum.sendRequest('upvote');
     } else if (event.menuItemId === 'downvote-link') {
-      PostFactum.sendRequest('downvote');
+      await PostFactum.sendRequest('downvote');
     }
   });
 })();
