@@ -1,5 +1,5 @@
 const assert = require("assert");
-const { getExtensionId } = require('../test_helper');
+const { getExtensionId } = require('./test_helper');
 
 describe('User downvotes page', function () {
   let page;
