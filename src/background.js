@@ -1,6 +1,7 @@
+/* global importScripts, PostFactum, getConfig */
 importScripts(
   './assets/javascripts/config.js',
-  './assets/javascripts/postfactum.js'
+  './assets/javascripts/postfactum.js',
 );
 
 (async () => {
@@ -20,8 +21,9 @@ chrome.contextMenus.create(upvoteMenuItem);
 chrome.contextMenus.create(downvoteMenuItem);
 chrome.contextMenus.onClicked.addListener((event) => {
   if (event.menuItemId === 'upvote-link') {
-    return PostFactum.sendRequest('upvote');
-  } else if (event.menuItemId === 'downvote-link') {
-    return PostFactum.sendRequest('downvote');
+    PostFactum.sendRequest('upvote');
+  }
+  if (event.menuItemId === 'downvote-link') {
+    PostFactum.sendRequest('downvote');
   }
 });
