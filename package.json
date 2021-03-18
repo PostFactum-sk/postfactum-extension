@@ -31,6 +31,7 @@
   "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
   "devDependencies": {
     "mocha": "^8.3.2",
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^8.0.0",
+    "xo": "^0.38.2"
   }
 }
