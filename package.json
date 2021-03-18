@@ -8,7 +8,12 @@
     "npm": ">=5.6"
   },
   "scripts": {
-    "test": "npx mocha test/**/*.test.js"
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint .",
+    "lint:js-fix": "eslint . --fix",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:ccs-fix": "stylelint \"src/**/*.css\" --fix",
+    "test": "npm run lint && mocha test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +35,13 @@
   },
   "homepage": "https://github.com/PostFactum-sk/postfactum-extension#readme",
   "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-mocha": "^8.1.0",
     "mocha": "^8.3.2",
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^8.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0"
   }
 }

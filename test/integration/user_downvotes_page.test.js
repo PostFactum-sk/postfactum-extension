@@ -1,7 +1,7 @@
-const assert = require("assert");
-const { getExtensionId } = require('./test_helper');
+const assert = require('assert');
+const { getExtensionId } = require('./test-helper');
 
-describe('User downvotes page', function () {
+describe('User downvotes page', () => {
   let page;
 
   beforeEach(async () => {
@@ -16,7 +16,7 @@ describe('User downvotes page', function () {
 
   context('when popup.html', () => {
     it('clicks downvote button', async () => {
-      await page.setRequestInterception(true)
+      await page.setRequestInterception(true);
       page.on('request', (request) => {
         if (request.url() === 'http://localhost:8000/api/v1/source_articles/submit/') {
           if (request.method() === 'POST') {
@@ -45,7 +45,7 @@ describe('User downvotes page', function () {
 
       await page.click('button[name="downvote"]');
       await page.waitForSelector('.r-response');
-      const responseText = await page.$eval('#r-response', response => response.innerText);
+      const responseText = await page.$eval('#r-response', (response) => response.innerText);
       assert.strictEqual(responseText, 'POŽIADAVKA BOLA ODOSLANÁ.\nĎAKUJEME');
     });
   });

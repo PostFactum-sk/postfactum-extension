@@ -1,5 +1,6 @@
 const path = require('path');
 const puppeteer = require('puppeteer');
+
 const rootPath = path.resolve();
 const extensionPath = path.join(rootPath, '/src');
 let browser;
@@ -16,11 +17,11 @@ async function bootBrowser() {
   });
 }
 
-before(async function () {
+before(async () => {
   browser = await bootBrowser();
   global.browser = browser;
 });
 
-after(async function () {
+after(async () => {
   await browser.close();
 });

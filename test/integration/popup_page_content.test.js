@@ -1,7 +1,7 @@
-const assert = require("assert");
-const { getExtensionId } = require('./test_helper');
+const assert = require('assert');
+const { getExtensionId } = require('./test-helper');
 
-describe('Popup page content', function () {
+describe('Popup page content', () => {
   let page;
 
   beforeEach(async () => {
@@ -14,8 +14,8 @@ describe('Popup page content', function () {
     await page.close();
   });
 
-  it('checks title', async function () {
-    const h1 = await page.$eval('h1', heading => heading.innerText);
+  it('checks title', async () => {
+    const h1 = await page.$eval('h1', (heading) => heading.innerText);
     assert.strictEqual(h1, 'Máte pochybnosti o dôveryhodnosti tejto stránky?');
   });
 });

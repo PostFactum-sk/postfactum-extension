@@ -1,5 +1,5 @@
-const assert = require("assert");
-const { getExtensionId } = require('./test_helper');
+const assert = require('assert');
+const { getExtensionId } = require('./test-helper');
 
 describe('User upvotes page', () => {
   let page;
@@ -16,7 +16,7 @@ describe('User upvotes page', () => {
 
   context('when popup.html', () => {
     it('clicks upvote button', async () => {
-      await page.setRequestInterception(true)
+      await page.setRequestInterception(true);
       page.on('request', (request) => {
         if (request.url() === 'http://localhost:8000/api/v1/source_articles/submit/') {
           if (request.method() === 'POST') {
@@ -45,7 +45,7 @@ describe('User upvotes page', () => {
 
       await page.click('button[name="upvote"]');
       await page.waitForSelector('.r-response');
-      const responseText = await page.$eval('#r-response', response => response.innerText);
+      const responseText = await page.$eval('#r-response', (response) => response.innerText);
       assert.strictEqual(responseText, 'POŽIADAVKA BOLA ODOSLANÁ.\nĎAKUJEME');
     });
   });
