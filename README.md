@@ -1,4 +1,5 @@
-## PostFactum.sk Chrome Extension [![Test](https://github.com/PostFactum-sk/postfactum-extension/actions/workflows/test.yml/badge.svg)](https://github.com/PostFactum-sk/postfactum-extension/actions/workflows/test.yml)
+## PostFactum.sk Chrome Extension
+[![Test](https://github.com/PostFactum-sk/postfactum-extension/actions/workflows/test.yml/badge.svg)](https://github.com/PostFactum-sk/postfactum-extension/actions/workflows/test.yml)
 
 PostFactum.sk is a framework for classifying trust for online sources  
 
