@@ -15,12 +15,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   submitForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const vote = event.submitter.name;
-    await PostFactum.sendRequest(vote);
-    rResponse.classList.add('r-response');
-    rResponse.innerHTML = 'Požiadavka bola odoslaná.<br>Ďakujeme';
+    try {
+      await PostFactum.sendRequest(vote);
+      rResponse.classList.add('r-response');
+      rResponse.classList.add('response-success');
+      rResponse.innerHTML = 'Požiadavka bola odoslaná.<br>Ďakujeme';
+    } catch (error) {
+      rResponse.classList.add('r-response');
+      rResponse.classList.add('response-error');
+      rResponse.innerHTML = 'Nastala chyba';
+    }
+
     delay(() => {
       rResponse.innerHTML = '';
       rResponse.classList.remove('r-response');
+      rResponse.className = rResponse.className.replace(/\bresponse-.+/, '');
     }, 2000);
   });
 });
