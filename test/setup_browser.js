@@ -6,7 +6,7 @@ const extensionPath = path.join(rootPath, '/src');
 let browser;
 
 async function bootBrowser() {
-  return puppeteer.launch({
+  const options = {
     headless: false,
     args: [
       `--disable-extensions-except=${extensionPath}`,
@@ -14,7 +14,13 @@ async function bootBrowser() {
       '--no-sandbox',
       '--disable-setuid-sandbox',
     ],
-  });
+  };
+
+  if (process.env.CI === 'true') {
+    options.executablePath = process.env.PUPPETEER_EXEC_PATH;
+  }
+
+  return puppeteer.launch(options);
 }
 
 before(async () => {
