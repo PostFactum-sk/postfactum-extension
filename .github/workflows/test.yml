@@ -12,5 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Test Code
       uses: tomtomecek/puppeteer-headful@master
+      env:
+        CI: 'true'
       with:
         args: npm cit --no-progress --no-audit
