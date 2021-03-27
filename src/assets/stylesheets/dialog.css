@@ -245,7 +245,6 @@ body {
 }
 
 .r-response {
-  background-color: #00964c;
   border-bottom: solid #004c22 2px;
   margin: 20px;
   text-align: center;
@@ -259,4 +258,12 @@ body {
   padding: 10px 10px 10px 10px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.response-success {
+  background-color: #00964c;
+}
+
+.response-error {
+  background-color: #e64745;
 }

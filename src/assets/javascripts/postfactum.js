@@ -17,6 +17,8 @@ const PostFactum = {
       },
       body: JSON.stringify(data),
     });
+
+    if (response.status !== 200) throw new Error(response.status);
     return response;
   },
 
